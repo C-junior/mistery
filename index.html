@@ -62,6 +62,34 @@
                 <div id="spell-feedback" class="feedback"></div>
             </div>
         </div>
+<!-- Antes da primeira pista -->
+<div id="news-page" class="page">
+    <div class="page-header">
+        <h2>O Profeta Diário</h2>
+    </div>
+    <div class="story-content">
+        <video id="news-video" width="100%" height="auto" controls>
+            <source src="assets/video/eu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="story-text">
+            Há algo estranho na mensagem de Hedwig... algo que parece não fazer sentido.
+        </p>
+        <div class="spell-input-container">
+            <label for="revelio-spell-input">Feitiço de Revelação:</label>
+            <input type="text" id="revelio-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
+            <button id="cast-revelio-spell-btn" class="magical-btn">Conjurar</button>
+        </div>
+        <div id="revelio-spell-feedback" class="feedback"></div>
+        <div id="dumbledore-video-container" style="display:none; margin-top:30px;">
+            <video id="dumbledore-video" width="100%" height="auto" controls>
+                <source src="assets/video/dumbledore.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="to-hedwig-btn" class="magical-btn" style="margin-top:20px;">Ir para a próxima pista</button>
+        </div>
+    </div>
+</div>
 
         <!-- Primeira Pista: Hedwig -->
         <div id="hedwig-page" class="page">

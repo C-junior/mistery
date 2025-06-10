@@ -97,6 +97,23 @@ function setupEventListeners() {
             restartGame();
         });
     }
+
+    // Revelio na página do Profeta Diário
+    const revelioSpellInput = document.getElementById('revelio-spell-input');
+    const castRevelioSpellBtn = document.getElementById('cast-revelio-spell-btn');
+    if (castRevelioSpellBtn) {
+        castRevelioSpellBtn.addEventListener('click', () => handleNewsRevelio(revelioSpellInput));
+        revelioSpellInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleNewsRevelio(revelioSpellInput);
+        });
+    }
+    const toHedwigBtn = document.getElementById('to-hedwig-btn');
+    if (toHedwigBtn) {
+        toHedwigBtn.addEventListener('click', () => {
+            showPage('hedwig-page');
+            playMagicalSound();
+        });
+    }
 }
 
 // Mostrar página específica
@@ -149,7 +166,7 @@ function handleCorrectSpell(spellType, inputElement) {
     setTimeout(() => {
         switch(spellType) {
             case 'unlock':
-                showPage('hedwig-page');
+                showPage('news-page');
                 break;
             case 'light':
                 showPage('light-page');
@@ -502,5 +519,32 @@ function createCursorTrail(x, y) {
             trail.parentNode.removeChild(trail);
         }
     }, 2000);
+}
+
+// Adicionar função para lidar com o Revelio na notícia
+function handleNewsRevelio(inputElement) {
+    const feedback = document.getElementById('revelio-spell-feedback');
+    const dumbledoreContainer = document.getElementById('dumbledore-video-container');
+    const userSpell = inputElement.value.toLowerCase().trim();
+    if (userSpell === 'revelio') {
+        showFeedback(feedback, 'Mensagem revelada! ✨', 'success');
+        createSpellEffect(inputElement);
+        playSuccessSound();
+        setTimeout(() => {
+            feedback.textContent = '';
+            feedback.className = 'feedback';
+            dumbledoreContainer.style.display = 'block';
+        }, 1500);
+    } else {
+        showFeedback(feedback, 'Feitiço incorreto. Tente novamente! 🪄', 'error');
+        inputElement.style.animation = 'shake 0.5s ease-in-out';
+        playErrorSound();
+        setTimeout(() => {
+            inputElement.style.animation = '';
+            inputElement.value = '';
+            feedback.textContent = '';
+            feedback.className = 'feedback';
+        }, 2000);
+    }
 }
 
