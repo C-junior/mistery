@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mistério do Bruxo Desaparecido - Caça ao Tesouro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="magical-background">
+        <div class="stars"></div>
+        <div class="floating-particles"></div>
+    </div>
+
+    <div class="container">
+        <!-- Página Inicial -->
+        <div id="intro-page" class="page active">
+            <div class="hogwarts-crest">
+                <img src="assets/images/hogwarts.png" alt="Brasão de Hogwarts" id="crest-img">
+            </div>
+            
+            <h1 class="main-title">O Mistério do Bruxo Desaparecido</h1>
+            <h2 class="subtitle">UMA INVESTIGAÇÃO PARA NAISSA</h2>
+            
+            <div class="story-content">
+                <div class="magical-symbols">
+                    <span class="symbol">⚡</span>
+                    <span class="symbol">🔮</span>
+                    <span class="symbol"><img src="assets/images/wand.png" ></span>
+                </div>
+                
+                <p class="story-text">
+                    <strong>Um chamado urgente da Diretoria de Magia</strong>
+                </p>
+                
+                <p class="story-text">
+                    Um evento misterioso abalou os corredores da antiga Escola de Magia de Hogwarts.
+                </p>
+                
+                <p class="story-text">
+                    Um jovem bruxo foi encontrado desacordado em sua própria casa, ao lado de sua varinha, 
+                    um exemplar do Livro dos Animais Fantásticos, e uma pena que parecia ter pertencido 
+                    a Hedwig, a lendária coruja.
+                </p>
+                
+                <p class="story-text">
+                    O Ministério teme que uma maldição antiga esteja envolvida. E por isso, só alguém 
+                    de grande coração e mente brilhante poderá descobrir a verdade.
+                </p>
+                
+                <p class="story-text highlight">
+                    Para começar sua investigação, use o feitiço que abre o que está trancado...
+                </p>
+                <img class="lock" src="assets/images/lock.png" alt="">
+                <div class="spell-input-container">
+                    <label for="spell-input">Feitiço:</label>
+                    <input type="text" id="spell-input" placeholder="Digite o feitiço aqui..." autocomplete="off">
+                    <button id="cast-spell-btn" class="magical-btn">Conjurar</button>
+                </div>
+                
+                <div id="spell-feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Primeira Pista: Hedwig -->
+        <div id="hedwig-page" class="page">
+            <div class="page-header">
+                <h2>🦉 A Coruja Observadora</h2>
+            </div>
+            
+            <div class="story-content">
+                <div class="magical-image-container">
+                    <img src="assets/images/hedwig.jpg" alt="Hedwig a coruja" class="story-image">
+                </div>
+                
+                <p class="story-text">
+                    Você entrou. A sala estava vazia, mas a coruja continuava encarando um canto escuro do cômodo. 
+                    Perto da parede, uma pena mágica flutuava lentamente no ar, como se tivesse sido deixada com pressa.
+                </p>
+                
+                <p class="story-text">
+                    Você nota algo brilhar ao lado de um livro caído...
+                </p>
+                
+                <button id="investigate-book-btn" class="magical-btn">Investigar o Livro</button>
+            </div>
+        </div>
+
+        <!-- Segunda Pista: Livro dos Animais Fantásticos -->
+        <div id="book-page" class="page">
+            <div class="page-header">
+                <h2>📖 O Livro dos Animais Fantásticos</h2>
+            </div>
+            
+            <div class="story-content">
+                <div class="magical-image-container">
+                    <img src="assets/images/fantastic-beasts-book.jpg" alt="Livro dos Animais Fantásticos" class="story-image">
+                </div>
+                
+                <p class="story-text">
+                    Dentro, uma anotação escrita à mão:
+                </p>
+                
+                <div class="handwritten-note">
+                    <p>"Ele estava pesquisando sobre uma criatura invisível a olhos trouxas. 
+                    Precisava de luz. Muita luz... conjure a magia que a cria."</p>
+                </div>
+                
+                <div class="spell-input-container">
+                    <label for="light-spell-input">Feitiço de Luz:</label>
+                    <input type="text" id="light-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
+                    <button id="cast-light-spell-btn" class="magical-btn">Conjurar</button>
+                </div>
+                
+                <div id="light-spell-feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Terceira Pista: Revelação da Luz -->
+        <div id="light-page" class="page">
+            <div class="page-header">
+                <h2>✨ A Luz Revela</h2>
+            </div>
+            
+            <div class="story-content">
+                <div class="magical-glow">
+                    <p class="story-text glowing-text">
+                        A luz se acende. A parede à frente revela palavras ocultas por tinta mágica.
+                    </p>
+                    
+                    <div class="revealed-message">
+                        <p>"Nem todas as criaturas fogem... algumas observam em silêncio. 
+                        Vá onde os feitiços dormem e acordam."</p>
+                        <p class="hint">(Vá até onde está guardada a varinha.)</p>
+                    </div>
+                </div>
+                
+                <button id="find-wand-btn" class="magical-btn">Procurar a Varinha</button>
+            </div>
+        </div>
+
+        <!-- Quarta Pista: A Varinha -->
+        <div id="wand-page" class="page">
+            <div class="page-header">
+                <h2>🪄 A Varinha Mágica</h2>
+            </div>
+            
+            <div class="story-content">
+                <div class="magical-image-container">
+                    <img src="assets/images/magic-wand.jpg" alt="Varinha Mágica" class="story-image">
+                </div>
+                
+                <p class="story-text">
+                    Próxima a ela, um papel dobrado com:
+                </p>
+                
+                <div class="handwritten-note">
+                    <p>"Usei essa varinha pela última vez ontem. Mas algo deu errado. 
+                    Ela ainda guarda um último vestígio do feitiço..."</p>
+                </div>
+                
+                <div class="spell-input-container">
+                    <label for="reveal-spell-input">Feitiço de Revelação:</label>
+                    <input type="text" id="reveal-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
+                    <button id="cast-reveal-spell-btn" class="magical-btn">Conjurar</button>
+                </div>
+                
+                <div id="reveal-spell-feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Quinta Pista: Revelação Final -->
+        <div id="revelation-page" class="page">
+            <div class="page-header">
+                <h2>🔮 A Revelação</h2>
+            </div>
+            
+            <div class="story-content">
+                <div class="magical-revelation">
+                    <p class="story-text floating-text">
+                        As palavras aparecem no ar.
+                    </p>
+                    
+                    <div class="floating-message">
+                        <p>"O bruxo tentou revelar algo importante... uma mensagem? Um pedido? Um segredo?"</p>
+                        <p>Dentro da varinha ainda há um eco...</p>
+                        <p class="whisper">Um nome sussurrado… o seu.</p>
+                        <p class="final-hint">Vá até o lugar onde os sonhos começam e terminam.</p>
+                    </div>
+                </div>
+                
+                <button id="final-room-btn" class="magical-btn">Ir ao Quarto</button>
+            </div>
+        </div>
+
+        <!-- Final: O Quarto -->
+        <div id="final-page" class="page">
+            <div class="page-header">
+                <h2>🛏️ O Quarto dos Sonhos</h2>
+            </div>
+            
+            <div class="story-content">
+                <p class="story-text">
+                    "Feche os olhos antes de entrar. Quando abrirem novamente, a verdade será revelada."
+                </p>
+                
+                <div class="close-eyes-container">
+                    <button id="close-eyes-btn" class="magical-btn">Fechar os Olhos</button>
+                </div>
+                
+                <div id="final-revelation" class="final-revelation hidden">
+                    <div class="magical-image-container">
+                        <img src="assets/images/sleeping-wizard.jpg" alt="Bruxo Dormindo" class="story-image">
+                    </div>
+                    
+                    <div class="final-message">
+                        <h3>🎉 Parabéns, Naissa!</h3>
+                        <p class="story-text">
+                            Você descobriu a verdade! O jovem bruxo não desapareceu... ele estava apenas 
+                            em um sono mágico profundo, causado por um feitiço de sonhos que deu errado.
+                        </p>
+                        
+                        <p class="story-text">
+                            Sua investigação brilhante e determinação salvaram o dia. O bruxo acordará 
+                            em breve, graças à sua coragem e inteligência!
+                        </p>
+                        
+                        <div class="celebration">
+                            <span class="sparkle">✨</span>
+                            <span class="sparkle">🌟</span>
+                            <span class="sparkle">⭐</span>
+                            <span class="sparkle">✨</span>
+                        </div>
+                        
+                        <button id="restart-btn" class="magical-btn">Começar Nova Aventura</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
