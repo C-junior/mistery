@@ -39,9 +39,10 @@
                 </p>
                 
                 <p class="story-text">
-                    Um jovem bruxo foi encontrado desacordado em sua própria casa, ao lado de sua varinha, 
-                    um exemplar do Livro dos Animais Fantásticos, e uma pena que parecia ter pertencido 
-                    a Hedwig, a lendária coruja.
+                   O mundo mudou desde a última vez que você o viu... e agora, a magia precisa de você."
+
+Um silêncio estranho paira no ar. A varinha dele está caída no chão.
+Você entra e percebe o vazio — ele desapareceu.
                 </p>
                 
                 <p class="story-text">
@@ -73,8 +74,12 @@
             Your browser does not support the video tag.
         </video>
         <p class="story-text">
-            Há algo estranho na mensagem de Hedwig... algo que parece não fazer sentido.
+            Mas... algo parece errado com o vídeo. Uma aura tremeluzente esconde parte da tela.
+
         </p>
+        <div class="handwritten-note">
+            <p>"A verdade está escondida. Use um feitiço para descobrir o que está oculto."</p>
+        </div>
         <div class="spell-input-container">
             <label for="revelio-spell-input">Feitiço de Revelação:</label>
             <input type="text" id="revelio-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
@@ -86,6 +91,11 @@
                 <source src="assets/video/dumbledore.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+                            <div class="handwritten-note">
+                    <p>“Quando tudo parece escuro, uma palavra pode reacender o caminho.
+Pronuncie alto o feitiço que ilumina até os cantos mais sombrios. ”
+
+</p></div>
             <button id="to-hedwig-btn" class="magical-btn" style="margin-top:20px;">Ir para a próxima pista</button>
         </div>
     </div>
@@ -99,17 +109,17 @@
             
             <div class="story-content">
                 <div class="magical-image-container">
-                    <img src="assets/images/hedwig.jpg" alt="Hedwig a coruja" class="story-image">
+                    <img src="assets/images/owl.png" alt="Hedwig a coruja" class="story-image">
                 </div>
                 
+
+                </div>
                 <p class="story-text">
-                    Você entrou. A sala estava vazia, mas a coruja continuava encarando um canto escuro do cômodo. 
-                    Perto da parede, uma pena mágica flutuava lentamente no ar, como se tivesse sido deixada com pressa.
+                    Você entrou. A sala estava vazia, havia apenas uma coruja lá, agarrada a um bilhete, mas ao te ver ela finalmente à solta como se estivesse entregando a você. 
+                    o bilhete parece ter sido deixada as pressas.
                 </p>
                 
-                <p class="story-text">
-                    Você nota algo brilhar ao lado de um livro caído...
-                </p>
+            
                 
                 <button id="investigate-book-btn" class="magical-btn">Investigar o Livro</button>
             </div>
@@ -123,20 +133,21 @@
             
             <div class="story-content">
                 <div class="magical-image-container">
-                    <img src="assets/images/fantastic-beasts-book.jpg" alt="Livro dos Animais Fantásticos" class="story-image">
+                    <img src="assets/images/book.png" alt="Livro dos Animais Fantásticos" class="story-image">
                 </div>
                 
                 <p class="story-text">
-                    Dentro, uma anotação escrita à mão:
+                    “Um movimento discreto, uma magia silenciosa... e lá está.
+O livro que ele lia antes de tudo acontecer. O conhecimento esconde mais do que palavras.”
                 </p>
                 
                 <div class="handwritten-note">
                     <p>"Ele estava pesquisando sobre uma criatura invisível a olhos trouxas. 
-                    Precisava de luz. Muita luz... conjure a magia que a cria."</p>
+                    uma criatura que havia sido quebrada a muito tempo, porem ele procurava um jeito de restaurar"</p>
                 </div>
                 
                 <div class="spell-input-container">
-                    <label for="light-spell-input">Feitiço de Luz:</label>
+                    <label for="light-spell-input">Conjure o feitiço:</label>
                     <input type="text" id="light-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
                     <button id="cast-light-spell-btn" class="magical-btn">Conjurar</button>
                 </div>
@@ -148,48 +159,47 @@
         <!-- Terceira Pista: Revelação da Luz -->
         <div id="light-page" class="page">
             <div class="page-header">
-                <h2>✨ A Luz Revela</h2>
+                <h2>✨ o Mapa</h2>
             </div>
             
             <div class="story-content">
                 <div class="magical-glow">
                     <p class="story-text glowing-text">
-                        A luz se acende. A parede à frente revela palavras ocultas por tinta mágica.
+                        Apos restaurado a mensagem se mostra a você e onde a varinha estava guardada agora jaz um objeto magico, propicio a encontrar o quem esta desaparecido,
+                        contanto que você saiba as palavras magicas.
                     </p>
                     
                     <div class="revealed-message">
-                        <p>"Nem todas as criaturas fogem... algumas observam em silêncio. 
-                        Vá onde os feitiços dormem e acordam."</p>
-                        <p class="hint">(Vá até onde está guardada a varinha.)</p>
+                        <p>"O livro que ele lia antes de tudo acontecer. O conhecimento esconde mais do que palavras"</p>
+                        <p class="hint">(Vá até onde estava guardada a varinha.)</p>
                     </div>
                 </div>
                 
-                <button id="find-wand-btn" class="magical-btn">Procurar a Varinha</button>
+                <button id="find-wand-btn" class="magical-btn">Procurar o mapa</button>
             </div>
         </div>
 
         <!-- Quarta Pista: A Varinha -->
         <div id="wand-page" class="page">
             <div class="page-header">
-                <h2>🪄 A Varinha Mágica</h2>
+                <h2>O mapa do Maroto</h2>
             </div>
             
             <div class="story-content">
                 <div class="magical-image-container">
-                    <img src="assets/images/magic-wand.jpg" alt="Varinha Mágica" class="story-image">
+                    <img src="assets/images/map.png" alt="Varinha Mágica" class="story-image">
                 </div>
                 
                 <p class="story-text">
-                    Próxima a ela, um papel dobrado com:
+                    Próxima a ele, um papel dobrado com:
                 </p>
                 
                 <div class="handwritten-note">
-                    <p>"Usei essa varinha pela última vez ontem. Mas algo deu errado. 
-                    Ela ainda guarda um último vestígio do feitiço..."</p>
+                    <p>"Diga as duas palavras de ativação"</p>
                 </div>
                 
                 <div class="spell-input-container">
-                    <label for="reveal-spell-input">Feitiço de Revelação:</label>
+                    <label for="reveal-spell-input">Feitiço ativação do mapa:</label>
                     <input type="text" id="reveal-spell-input" placeholder="Digite o feitiço..." autocomplete="off">
                     <button id="cast-reveal-spell-btn" class="magical-btn">Conjurar</button>
                 </div>

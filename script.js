@@ -1,8 +1,8 @@
 // Configuração dos feitiços corretos
 const SPELLS = {
     unlock: 'alohomora',
-    light: 'lumos',
-    reveal: 'revelio'
+    light: 'reparo',
+    reveal: 'malfeito feito'
 };
 
 // Estado atual do jogo
@@ -474,7 +474,7 @@ function createKeyboardSparkle(e) {
         { opacity: 1, transform: 'scale(1)' },
         { opacity: 0, transform: 'scale(0)' }
     ], {
-        duration: 1000,
+        duration: 3000,
         easing: 'ease-out'
     });
     
@@ -487,7 +487,7 @@ function createKeyboardSparkle(e) {
 
 // Adicionar efeito de cursor mágico
 document.addEventListener('mousemove', function(e) {
-    if (Math.random() < 0.02) { // 2% de chance a cada movimento
+    if (Math.random() < 0.62) { // 2% de chance a cada movimento
         createCursorTrail(e.clientX, e.clientY);
     }
 });
