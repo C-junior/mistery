@@ -19,12 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeGame();
     setupEventListeners();
     createMagicalEffects();
+
+    // Tentar tocar o áudio de fundo após qualquer interação do usuário
+    const themeAudio = document.getElementById('theme-audio');
+    function tryPlayThemeAudio() {
+        if (themeAudio && themeAudio.paused) {
+            themeAudio.volume = 0.5;
+            themeAudio.play().catch(() => {});
+        }
+        document.removeEventListener('click', tryPlayThemeAudio);
+        document.removeEventListener('keydown', tryPlayThemeAudio);
+    }
+    document.addEventListener('click', tryPlayThemeAudio);
+    document.addEventListener('keydown', tryPlayThemeAudio);
 });
 
 // Inicializar o jogo
 function initializeGame() {
     showPage('intro-page');
-    playBackgroundMusic();
 }
 
 // Configurar event listeners
@@ -401,6 +413,13 @@ function restartGame() {
     if (finalRevelation) {
         finalRevelation.classList.add('hidden');
     }
+
+    // Reiniciar música de fundo
+    const themeAudio = document.getElementById('theme-audio');
+    if (themeAudio) {
+        themeAudio.currentTime = 0;
+        themeAudio.play();
+    }
     
     // Voltar para página inicial
     showPage('intro-page');
@@ -424,8 +443,7 @@ function createRestartEffect() {
 
 // Funções de áudio (simuladas - podem ser implementadas com Web Audio API)
 function playBackgroundMusic() {
-    // Implementar música de fundo se necessário
-    console.log('🎵 Música de fundo mágica iniciada');
+    // Não é mais necessário, o áudio é controlado pelo HTML
 }
 
 function playMagicalSound() {
@@ -525,6 +543,8 @@ function createCursorTrail(x, y) {
 function handleNewsRevelio(inputElement) {
     const feedback = document.getElementById('revelio-spell-feedback');
     const dumbledoreContainer = document.getElementById('dumbledore-video-container');
+    const dumbledoreVideo = document.getElementById('dumbledore-video');
+    const themeAudio = document.getElementById('theme-audio');
     const userSpell = inputElement.value.toLowerCase().trim();
     if (userSpell === 'revelio') {
         showFeedback(feedback, 'Mensagem revelada! ✨', 'success');
@@ -534,6 +554,16 @@ function handleNewsRevelio(inputElement) {
             feedback.textContent = '';
             feedback.className = 'feedback';
             dumbledoreContainer.style.display = 'block';
+            // Pausar música de fundo
+            if (themeAudio) themeAudio.pause();
+            // Tocar vídeo do Dumbledore com áudio
+            if (dumbledoreVideo) {
+                dumbledoreVideo.muted = false;
+                dumbledoreVideo.currentTime = 0;
+                dumbledoreVideo.play().catch(() => {});
+                // Scroll para o vídeo
+                dumbledoreVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }, 1500);
     } else {
         showFeedback(feedback, 'Feitiço incorreto. Tente novamente! 🪄', 'error');

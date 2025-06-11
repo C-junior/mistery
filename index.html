@@ -13,6 +13,9 @@
         <div class="floating-particles"></div>
     </div>
 
+    <!-- Música de fundo -->
+    <audio id="theme-audio" src="assets/audio/theme.mp3" autoplay loop controls style="display:none;" playsinline></audio>
+
     <div class="container">
         <!-- Página Inicial -->
         <div id="intro-page" class="page active">
@@ -69,7 +72,7 @@ Você entra e percebe o vazio — ele desapareceu.
         <h2>O Profeta Diário</h2>
     </div>
     <div class="story-content">
-        <video id="news-video" width="100%" height="auto" controls>
+        <video id="news-video" width="100%" height="auto" controls autoplay muted playsinline>
             <source src="assets/video/eu.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -87,7 +90,7 @@ Você entra e percebe o vazio — ele desapareceu.
         </div>
         <div id="revelio-spell-feedback" class="feedback"></div>
         <div id="dumbledore-video-container" style="display:none; margin-top:30px;">
-            <video id="dumbledore-video" width="100%" height="auto" controls>
+            <video id="dumbledore-video" width="100%" height="auto" controls autoplay muted playsinline>
                 <source src="assets/video/dumbledore.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -249,7 +252,7 @@ O livro que ele lia antes de tudo acontecer. O conhecimento esconde mais do que 
                 
                 <div id="final-revelation" class="final-revelation hidden">
                     <div class="magical-image-container">
-                        <img src="assets/images/sleeping-wizard.jpg" alt="Bruxo Dormindo" class="story-image">
+                        <video id="naissa-video" class="story-image" src="assets/video/naissa.mp4" autoplay loop muted playsinline></video>
                     </div>
                     
                     <div class="final-message">
