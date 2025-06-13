@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeAudio = document.getElementById('theme-audio');
     function tryPlayThemeAudio() {
         if (themeAudio && themeAudio.paused) {
-            themeAudio.volume = 0.5;
+            themeAudio.volume = 1;
             themeAudio.play().catch(() => {});
         }
         document.removeEventListener('click', tryPlayThemeAudio);
